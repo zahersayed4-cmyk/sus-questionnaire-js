@@ -1,0 +1,68 @@
+body {
+  font-family: "Times New Roman", Times, serif;
+}
+
+h1, h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-variant: small-caps;
+}
+
+/* 5-Point Likert scale */
+.likert-flexbox-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.likert-flex-item {
+  flex: 1;
+  text-align: center;
+}
+
+.likert-flex-item label {
+  display: block;
+  font-size: 14px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.likert-flex-item:hover {
+  background-color: #fff5eb;
+  border-radius: 8px;
+}
+
+/* Flexbox layout for each SUS item (number + statement + likert) */
+.sus-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 14px;
+  max-width: 900px;   /* اختياري: يمنع التمدد المبالغ */
+}
+
+.sus-number {
+  flex: 0 0 40px;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.sus-text {
+  flex: 2;
+  padding-right: 15px;
+}
+
+/* important: likert is BOTH a flex-item in SUS row AND a flexbox container */
+.sus-item .likert-flexbox-container {
+  flex: 3;
+}
+
+/* Thin line between each SUS item */
+.sus-item {
+  border-bottom: 1px solid #ddd;   /* tunn ljusgrå linje */
+  padding-bottom: 10px;
+  margin-bottom: 16px;
+}
+
+/* Remove line after the last question */
+.sus-item:last-of-type {
+  border-bottom: none;
+}

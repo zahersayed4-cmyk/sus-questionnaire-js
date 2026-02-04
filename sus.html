@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="author" content="Zaher Alsayed Ahmad">
+  <meta charset="utf-8">
+  <meta name="description" content="A web page for lesson1 by Zaher Alsayed Ahmad">
+  <title>SUS Questionnaire</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="scripts.js"></script>
+</head>
+
+<body>
+  <h1>Questionnaire: System Usability Scale (SUS)</h1>
+
+  <h2>Image</h2>
+  <img src="media/sus-teaser.png" alt="System Usability Scale (SUS)">
+
+  <h2>Instruction</h2>
+  <p>
+    For each of the following statements, mark <u>one</u> box that best describes your reactions
+    to the system you interacted with today.
+  </p>
+
+  <!-- بدل "start over" نخليه زر يولّد الاستبيان -->
+  <p>
+    <button onclick="generateQuestionnaire()">Generate a new questionnaire.</button>
+  </p>
+
+  <!-- هنا راح ينحط الاستبيان ديناميكيًا -->
+  <div id="sus-questionnaire-container">
+    <h2>System Usability Scale</h2>
+  </div>
+
+  <!-- قسم النتيجة -->
+  <div id="sus-result-container">
+    <h2>Result</h2>
+    <button type="submit" onclick="submitQuestionnaire()">Submit.</button>
+    <h3 id="sus-result"></h3>
+  </div>
+</body>
+</html>
